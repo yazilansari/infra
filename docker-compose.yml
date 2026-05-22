@@ -23,7 +23,7 @@ services:
     image: confluentinc/cp-zookeeper:7.5.0
 
     container_name: zookeeper
-
+    restart: always
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
 
@@ -41,7 +41,7 @@ services:
     image: confluentinc/cp-kafka:7.5.0
 
     container_name: kafka
-
+    restart: always
     depends_on:
       - zookeeper
 
